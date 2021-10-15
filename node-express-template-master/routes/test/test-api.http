@@ -1,0 +1,57 @@
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "firstName":"TEST",
+    "lastName":"Test last name",
+    "email":"test@trainig.com",
+    "password":"password123"
+}
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"test@trainig.com",
+    "password":"password123"
+}
+###
+GET http://localhost:3000/api/employee/all
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzY4NTc1OCwiZXhwIjoxNjMzNzE1NzU4fQ.2TjKjW8KIO4K7iOEr-ZiddrrEsfw700kyBBgIxyBa2E
+###
+POST http://localhost:3000/api/employee/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzYwMzQ0MywiZXhwIjoxNjMzNjMzNDQzfQ.7LY8UCuZvbouePbHchDM00sQyQhjSLmFV_9xtMrpg3s
+
+{
+    "email":"employee1@emai.com",
+    "name":"Dan"
+}
+###
+GET http://localhost:3000/api/employee/615ee0d0cbcf1c022872f12e
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzYwODk2NywiZXhwIjoxNjMzNjM4OTY3fQ.6jWxpypBfNgDi_pHhl1FH-qAyvvaAMETPq3meXC9tjs
+###
+POST http://localhost:3000/api/inventory/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzY4NTc1OCwiZXhwIjoxNjMzNzE1NzU4fQ.2TjKjW8KIO4K7iOEr-ZiddrrEsfw700kyBBgIxyBa2E
+
+{
+    "name":"HP Laptop",
+    "inventoryCode":"12321312312",
+    "category":"Laptop",
+    "quantity":3
+}
+###
+GET http://localhost:3000/api/inventory/all?page=0&size=10
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzY4NTc1OCwiZXhwIjoxNjMzNzE1NzU4fQ.2TjKjW8KIO4K7iOEr-ZiddrrEsfw700kyBBgIxyBa2E
+###
+POST http://localhost:3000/api/inventory/addEmployee/615ee0d0cbcf1c022872f12e/inventory/615fc95b6f048b6fa05b27dc
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzY4NTc1OCwiZXhwIjoxNjMzNzE1NzU4fQ.2TjKjW8KIO4K7iOEr-ZiddrrEsfw700kyBBgIxyBa2E
+###
+GET http://localhost:3000/api/inventory/import
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdHJhaW5pZy5jb20iLCJpZCI6IjYxNWQ5YzU1YmY4MTBlOGNlNDZlYWE4ZiIsImlhdCI6MTYzMzY4NTc1OCwiZXhwIjoxNjMzNzE1NzU4fQ.2TjKjW8KIO4K7iOEr-ZiddrrEsfw700kyBBgIxyBa2E
